@@ -1,4 +1,4 @@
-# kennship/terraform-aws-web/modules/api-lambda-endpoint
+# kennship/web/aws//modules/api-lambda-endpoint
 
 > Creates and integrates an AWS API Gateway Resource with a Lambda function.
 

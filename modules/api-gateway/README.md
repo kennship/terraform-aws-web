@@ -1,4 +1,4 @@
-# kennship/terraform-aws-web/modules/api-gateway
+# kennship/web/aws//modules/api-gateway
 
 > Opinionated API Gateway setup
 
