@@ -29,5 +29,4 @@ workflows:
       - release:
           context: internal
           requires:
-            - build
-            - test
+            - install
