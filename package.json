@@ -1,0 +1,39 @@
+{
+  "name": "@kennship/terraform-aws-web",
+  "version": "0.0.0-semantically-released",
+  "description": "Terraform modules for AWS resources",
+  "repository": "https://github.com/kennship/terraform-aws-web",
+  "license": "MIT",
+  "author": "Ryan Kennedy <ryaninvents@users.noreply.github.com>",
+  "main": "index.js",
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/github": "^5.2.10",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+    "semantic-release": "^15.13.3"
+  },
+  "release": {
+    "branch": "master",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ],
+    "publish": ["@semantic-release/git", "@semantic-release/github"]
+  }
+}

@@ -1,0 +1,33 @@
+---
+version: 2
+jobs:
+  install:
+    docker: &ref_0
+      - image: 'circleci/node:11'
+    steps:
+      - checkout
+      - run:
+          name: install
+          command: npm install
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules/**
+  release:
+    docker: *ref_0
+    steps:
+      - checkout
+      - run:
+          name: release
+          command: npm run semantic-release
+workflows:
+  version: 2
+  main:
+    jobs:
+      - install:
+          context: internal
+      - release:
+          context: internal
+          requires:
+            - build
+            - test
