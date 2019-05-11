@@ -34,6 +34,9 @@
         }
       ]
     ],
-    "publish": ["@semantic-release/git", "@semantic-release/github"]
+    "publish": [
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
   }
 }
