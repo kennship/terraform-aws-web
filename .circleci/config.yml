@@ -4,6 +4,8 @@ jobs:
   install:
     docker: &ref_0
       - image: 'circleci/node:11'
+    environment:
+      NODE_ENV: development
     steps:
       - checkout
       - run:
@@ -15,6 +17,8 @@ jobs:
             - node_modules/**
   release:
     docker: *ref_0
+    environment:
+      NODE_ENV: production
     steps:
       - checkout
       - run:
