@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/kennship/terraform-aws-web/compare/v1.1.0...v1.2.0) (2019-05-12)
+
+
+### Features
+
+* create lambda-gateway-permissions module ([910d36e](https://github.com/kennship/terraform-aws-web/commit/910d36e))
+
 # [1.1.0](https://github.com/kennship/terraform-aws-web/compare/v1.0.0...v1.1.0) (2019-05-12)
 
 
