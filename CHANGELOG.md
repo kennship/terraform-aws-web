@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/kennship/terraform-aws-web/compare/v1.2.1...v2.0.0) (2019-05-31)
+
+
+### chore
+
+* require Terraform 0.12 ([300c09b](https://github.com/kennship/terraform-aws-web/commit/300c09b))
+
+
+### BREAKING CHANGES
+
+* No longer compatible with Terraform 0.11
+
 ## [1.2.1](https://github.com/kennship/terraform-aws-web/compare/v1.2.0...v1.2.1) (2019-05-30)
 
 
