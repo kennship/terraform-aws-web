@@ -1,3 +1,11 @@
+# [2.1.0](https://github.com/kennship/terraform-aws-web/compare/v2.0.0...v2.1.0) (2019-06-02)
+
+
+### Features
+
+* add CloudFront hostname output ([6cf4399](https://github.com/kennship/terraform-aws-web/commit/6cf4399))
+* permit association of Edge lambdas with CloudFront distro ([d2347c0](https://github.com/kennship/terraform-aws-web/commit/d2347c0))
+
 # [2.0.0](https://github.com/kennship/terraform-aws-web/compare/v1.2.1...v2.0.0) (2019-05-31)
 
 
