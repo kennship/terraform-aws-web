@@ -35,4 +35,5 @@ This module assumes that:
 ## Outputs
 
 - **`cloudfront_distro`:** URL of raw CloudFront distribution
+- **`cloudfront_host`:** Hostname of CloudFront distribution, for setting DNS
 - **`app_location`:** URL of your application's entry point
