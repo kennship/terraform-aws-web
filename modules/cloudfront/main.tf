@@ -34,6 +34,16 @@ resource "aws_cloudfront_distribution" "cloudfront" {
     min_ttl                = 0
     default_ttl            = 0
     max_ttl                = 0
+
+    dynamic "lambda_function_association" {
+      for_each = var.lambda_function_associations
+      iterator = assn
+      content {
+        event_type = lookup(assn.value, "event_type")
+        lambda_arn = lookup(assn.value, "lambda_arn")
+        include_body = lookup(assn.value, "include_body")
+      }
+    }
   }
 
   custom_error_response {

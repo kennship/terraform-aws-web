@@ -20,6 +20,17 @@ This module assumes that:
 - **`static_asset_bucket`:** Name of S3 bucket hosting static assets (via S3 website feature)
 - **`tls_certificate_arn`:** ARN of Amazon Certificate Manager certificate
 - **`tags`:** Tags to associate with this CloudFront distribution (default `{}`)
+- **`lambda_function_associations`:** List of `{event_type, lambda_arn, include_body}` objects representing Lambda function associations for the CloudFront distribution. (default = `[]`)
+    > Example:
+    > ```
+    >  lambda_function_associations = [
+    >    {
+    >      event_type = "viewer-request",
+    >      lambda_arn = aws_lambda_function.html_redirect_lambda.qualified_arn,
+    >      include_body = false
+    >    }
+    >  ]
+    >  ```
 
 ## Outputs
 

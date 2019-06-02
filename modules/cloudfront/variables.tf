@@ -27,6 +27,18 @@ variable "tls_certificate_arn" {
   description = "ARN of Amazon Certificate Manager certificate"
 }
 
+variable "lambda_function_associations" {
+  description = "Lambda function associations for the CloudFront distro (event_type and lambda_arn)"
+  type = list(
+    object({
+      event_type = string
+      lambda_arn = string
+      include_body = bool
+    })
+  )
+  default = []
+}
+
 variable "tags" {
   description = "Tags to associate with this CloudFront distribution"
   default = {}
@@ -35,4 +47,5 @@ variable "tags" {
 locals {
   deployment_id = "${var.deployment_id == "" ? var.app_stage : var.deployment_id}"
   tags = "${merge(map("app_name", var.app_name, "app_stage", var.app_stage), var.tags)}"
+  lambda_function_associations = var.lambda_function_associations
 }
