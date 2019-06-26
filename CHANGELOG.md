@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/kennship/terraform-aws-web/compare/v2.1.0...v2.1.1) (2019-06-26)
+
+
+### Bug Fixes
+
+* **api-lambda-endpoint:** correctly attach HTTP method ([0b1629f](https://github.com/kennship/terraform-aws-web/commit/0b1629f))
+
 # [2.1.0](https://github.com/kennship/terraform-aws-web/compare/v2.0.0...v2.1.0) (2019-06-02)
 
 
