@@ -40,7 +40,7 @@ locals {
   parent_resource_id = "${var.parent_resource_id == "ATTACH_TO_ROOT" ? var.rest_api_root_resource_id : var.parent_resource_id}"
 
   attached_resource_id = "${
-    var.create_resource == 1
+    var.create_resource
       ? element(concat(aws_api_gateway_resource.resource.*.id, list("")), 0)
       : local.parent_resource_id
   }"
