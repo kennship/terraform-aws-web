@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/kennship/terraform-aws-web/compare/v2.1.1...v2.1.2) (2019-07-13)
+
+
+### Bug Fixes
+
+* document authorizer variables ([4a44299](https://github.com/kennship/terraform-aws-web/commit/4a44299))
+
 ## [2.1.1](https://github.com/kennship/terraform-aws-web/compare/v2.1.0...v2.1.1) (2019-06-26)
 
 
