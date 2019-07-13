@@ -29,10 +29,12 @@ variable "http_method" {
 }
 
 variable "authorization" {
+  description = "The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)"
   default = "NONE"
 }
 
 variable "authorizer_id" {
+  description = "The authorizer ID to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`. Expected to be the `id` property of an `aws_api_gateway_authorizer` resource"
   default = ""
 }
 
